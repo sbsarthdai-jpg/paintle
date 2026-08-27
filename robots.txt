@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /myworks.html
 
-Sitemap: https://paintle.example.com/sitemap.xml
+Sitemap: https://idyllic-biscuit-5e4c07.netlify.app/sitemap.xml

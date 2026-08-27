@@ -25,7 +25,7 @@
 
   document.title = `${template.title} 색칠하기 — Paintle`;
 
-  const pageUrl = `https://paintle.example.com/color.html?id=${template.id}`;
+  const pageUrl = `https://idyllic-biscuit-5e4c07.netlify.app/color.html?id=${template.id}`;
   const pageDescription = `${template.title} 도안을 마우스로 자유롭게 색칠해보세요. ${template.category} 카테고리의 무료 색칠놀이 도안이에요.`;
   document.getElementById('metaDescription')?.setAttribute('content', pageDescription);
   document.getElementById('canonicalLink')?.setAttribute('href', pageUrl);

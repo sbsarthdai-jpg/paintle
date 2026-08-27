@@ -1,0 +1,15 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#1F2937" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M200,70
+           C245,65 275,90 278,120
+           C315,120 340,155 320,188
+           C340,212 325,248 288,252
+           C282,282 240,298 205,278
+           C175,300 135,288 128,258
+           C92,255 78,218 100,190
+           C82,162 96,124 132,115
+           C136,85 168,68 200,70 Z"/>
+
+  <rect x="184" y="252" width="32" height="88"/>
+  <path d="M184 280h32M184 305h32"/>
+  <path d="M170 340h60"/>
+</svg>

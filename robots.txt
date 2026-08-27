@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /myworks.html
+
+Sitemap: https://paintle.example.com/sitemap.xml

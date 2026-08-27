@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paintle — 마우스로 칠하는 색칠 놀이터</title>
+  <meta name="description" content="Paintle은 꽃, 고양이, 별 등 다양한 도안을 골라 마우스로 자유롭게 색칠하는 무료 온라인 색칠놀이 사이트입니다. 회원가입 없이 바로 시작해보세요." />
+  <link rel="canonical" href="https://paintle.example.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Paintle" />
+  <meta property="og:title" content="Paintle — 마우스로 칠하는 색칠 놀이터" />
+  <meta property="og:description" content="도안을 고르고 마우스로 자유롭게 색칠해보세요. 회원가입 없이 무료로 바로 시작할 수 있어요." />
+  <meta property="og:url" content="https://paintle.example.com/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Paintle — 마우스로 칠하는 색칠 놀이터" />
+  <meta name="twitter:description" content="도안을 고르고 마우스로 자유롭게 색칠해보세요. 회원가입 없이 무료로 바로 시작할 수 있어요." />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Paintle",
+    "url": "https://paintle.example.com/",
+    "description": "마우스로 도안을 색칠하는 무료 온라인 색칠놀이 사이트"
+  }
+  </script>
+</head>
+<body data-page="home">
+  <div id="app-header"></div>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>도안을 고르고, 마우스로 색칠해보세요 🎨</h1>
+        <p>Paintle은 좋아하는 도안을 골라 붓으로 자유롭게 색칠하는 온라인 색칠놀이 사이트예요.</p>
+        <div class="hero-actions">
+          <a href="gallery.html" class="btn btn-primary">도안 둘러보기</a>
+          <a href="color.html?id=cat" class="btn btn-outline">바로 색칠해보기</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-head">
+        <h2>인기 도안</h2>
+        <a href="gallery.html" class="link-more">전체 보기 →</a>
+      </div>
+      <div class="template-grid" id="popularGrid"></div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="js/icons.js"></script>
+  <script src="js/data/templates.js"></script>
+  <script src="js/templateCard.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

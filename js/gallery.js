@@ -8,6 +8,14 @@
       <h1>도안 갤러리</h1>
     </div>
 
+    <a href="color.html?id=blank" class="sketchbook-banner">
+      <div class="sketchbook-banner-text">
+        <strong>${icon('pencil')}빈 스케치북</strong>
+        <span>도안 없이 마우스로 자유롭게 낙서해보세요</span>
+      </div>
+      <span class="btn btn-outline btn-sm">시작하기</span>
+    </a>
+
     <div class="gallery-controls">
       <div class="input-with-icon search-box">
         ${icon('search')}

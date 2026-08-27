@@ -7,8 +7,16 @@
     '#EC4899', '#F43F5E', '#92400E', '#1F2937', '#6B7280', '#FFFFFF',
   ];
 
+  const BLANK_TEMPLATE = {
+    id: 'blank',
+    title: '빈 스케치북',
+    category: '스케치북',
+    src: null,
+  };
+
   const params = new URLSearchParams(location.search);
-  const template = getTemplateById(params.get('id'));
+  const requestedId = params.get('id');
+  const template = requestedId === 'blank' ? BLANK_TEMPLATE : getTemplateById(requestedId);
 
   const main = document.getElementById('colorMain');
 
@@ -23,10 +31,12 @@
     return;
   }
 
-  document.title = `${template.title} 색칠하기 — Paintle`;
+  document.title = template.src ? `${template.title} 색칠하기 — Paintle` : `${template.title} — Paintle`;
 
   const pageUrl = `https://idyllic-biscuit-5e4c07.netlify.app/color.html?id=${template.id}`;
-  const pageDescription = `${template.title} 도안을 마우스로 자유롭게 색칠해보세요. ${template.category} 카테고리의 무료 색칠놀이 도안이에요.`;
+  const pageDescription = template.src
+    ? `${template.title} 도안을 마우스로 자유롭게 색칠해보세요. ${template.category} 카테고리의 무료 색칠놀이 도안이에요.`
+    : '빈 스케치북에 마우스로 자유롭게 그림을 그려보세요. 도안 없이 자유 낙서도 가능해요.';
   document.getElementById('metaDescription')?.setAttribute('content', pageDescription);
   document.getElementById('canonicalLink')?.setAttribute('href', pageUrl);
   document.getElementById('ogTitle')?.setAttribute('content', document.title);
@@ -83,9 +93,9 @@
       <div>
         <div class="canvas-stage" id="canvasStage">
           <canvas id="drawCanvas"></canvas>
-          <img id="lineArt" src="${template.src}" alt="${template.title} 도안" />
+          ${template.src ? `<img id="lineArt" src="${template.src}" alt="${template.title} 도안" />` : ''}
         </div>
-        <p class="save-hint">붓으로 도안 위를 칠해보세요. 저장하면 "내 작품" 페이지에서 다시 볼 수 있어요.</p>
+        <p class="save-hint">${template.src ? '붓으로 도안 위를 칠해보세요.' : '빈 스케치북에 자유롭게 그려보세요.'} 저장하면 "내 작품" 페이지에서 다시 볼 수 있어요.</p>
       </div>
     </div>
   `;
@@ -100,7 +110,7 @@
   const canvas = document.getElementById('drawCanvas');
   const stage = document.getElementById('canvasStage');
   const ctx = canvas.getContext('2d');
-  const lineArtImg = document.getElementById('lineArt');
+  const lineArtImg = template.src ? document.getElementById('lineArt') : null;
 
   let color = PALETTE[8];
   let tool = 'brush';
@@ -291,7 +301,9 @@
     octx.fillStyle = '#FFFFFF';
     octx.fillRect(0, 0, size, size);
     octx.drawImage(canvas, 0, 0, size, size);
-    octx.drawImage(lineArtImg, 0, 0, size, size);
+    if (lineArtImg) {
+      octx.drawImage(lineArtImg, 0, 0, size, size);
+    }
     return out.toDataURL('image/png');
   }
 

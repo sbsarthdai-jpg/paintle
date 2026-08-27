@@ -1,0 +1,13 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#1F2937" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M100,340 L300,120"/>
+  <circle cx="260" cy="185" r="12"/>
+  <defs>
+    <path id="cbpetal" d="M200,200 C182,182 174,148 186,118 C190,108 195,112 200,120 C205,112 210,108 214,118 C226,148 218,182 200,200 Z"/>
+  </defs>
+  <use href="#cbpetal" transform="rotate(0 200 200)"/>
+  <use href="#cbpetal" transform="rotate(72 200 200)"/>
+  <use href="#cbpetal" transform="rotate(144 200 200)"/>
+  <use href="#cbpetal" transform="rotate(216 200 200)"/>
+  <use href="#cbpetal" transform="rotate(288 200 200)"/>
+  <circle cx="200" cy="200" r="14"/>
+</svg>

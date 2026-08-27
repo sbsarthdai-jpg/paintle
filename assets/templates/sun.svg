@@ -1,0 +1,17 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#1F2937" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <line id="ray" x1="200" y1="120" x2="200" y2="75"/>
+  </defs>
+  <use href="#ray" transform="rotate(0 200 200)"/>
+  <use href="#ray" transform="rotate(45 200 200)"/>
+  <use href="#ray" transform="rotate(90 200 200)"/>
+  <use href="#ray" transform="rotate(135 200 200)"/>
+  <use href="#ray" transform="rotate(180 200 200)"/>
+  <use href="#ray" transform="rotate(225 200 200)"/>
+  <use href="#ray" transform="rotate(270 200 200)"/>
+  <use href="#ray" transform="rotate(315 200 200)"/>
+  <circle cx="200" cy="200" r="70"/>
+  <circle cx="180" cy="185" r="6" fill="#1F2937" stroke="none"/>
+  <circle cx="220" cy="185" r="6" fill="#1F2937" stroke="none"/>
+  <path d="M178,220 q22,18 44,0"/>
+</svg>
